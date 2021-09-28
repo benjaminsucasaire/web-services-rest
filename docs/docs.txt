@@ -1,0 +1,82 @@
+##CONSULTAS POR POSTMAN --REST
+
+
+
+#####----- para consultar las filas con el estado = 1 de todo la tabla
+1)elejimos el metodo GET
+2)ingresamos url
+http://localhost/web-services-rest/controller/categoria.php?op=GetAll
+3) selecionamos Params
+4) y enviamos la solicitud
+
+
+######-- para consultar por post una fila por su id
+
+1)elejimos el metodo POST
+2)ingresamos url
+http://localhost/web-services-rest/controller/categoria.php?op=GetId
+3) selecionamos body
+4) la opcion raw
+5) y la opcion json
+6)ingresamos el id
+{
+    "cat_id":3
+}
+
+7) y enviamos la solicitud
+
+
+
+#########--------insertamos una fila
+1)elejimos el metodo POST
+2)ingresamos url
+http://localhost/web-services-rest/controller/categoria.php?op=Insert
+3) selecionamos body
+4) la opcion raw
+5) y la opcion json
+6)ingresamos los datos
+{
+    "cat_nom":"Procesador",
+    "cat_obs":"observación procesador"
+}
+
+7) y enviamos la solicitud
+
+
+#########--------Actulizamos una fila
+1)elejimos el metodo POST
+2)ingresamos url
+http://localhost/web-services-rest/controller/categoria.php?op=Update
+3) selecionamos body
+4) la opcion raw
+5) y la opcion json
+6)ingresamos los datos
+{
+    "cat_id":5,
+    "cat_nom":"Procesador intel",
+    "cat_obs":"observación procesador actu"
+}
+
+7) y enviamos la solicitud
+
+
+#########--------Eliminamos una fila de la vista del usuario
+1)elejimos el metodo POST
+2)ingresamos url
+http://localhost/web-services-rest/controller/categoria.php?op=Delete
+3) selecionamos body
+4) la opcion raw
+5) y la opcion json
+6)ingresamos los datos
+{
+    "cat_id":5
+}
+
+7) y enviamos la solicitud
+
+8) aun se vera el dato en la base de datos, pero con estado =0 
+la cual no permitira que el usuario lo vea.
+
+
+
+########################################
